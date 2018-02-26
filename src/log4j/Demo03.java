@@ -8,10 +8,11 @@ public class Demo03 {
 	static Logger logger = Logger.getLogger(Demo03.class);
 	
 	public static void main(String[] args) {
-		//与 Log4j入门 中的BasicConfigurator.configure();方式不同，采用指定配置文件
+		//2、与 Log4j入门 中的BasicConfigurator.configure();方式不同，采用指定配置文件
 		//Log4j的配置方式按照log4j.properties中的设置进行
 		PropertyConfigurator.configure("D:\\project\\JavaApplication\\src\\log4j.properties");
 		for (int i = 0; i < 10; i++) {
+			//3.进行不同级别的日志输出
 			logger.trace("跟踪信息");
 			logger.debug("调试信息");
 			logger.info("输出信息");
